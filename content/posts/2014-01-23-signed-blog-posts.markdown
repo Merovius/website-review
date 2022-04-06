@@ -5,7 +5,7 @@ tags:
 - meta
 aliases:
 - "/2014/01/23/signed-blog-posts.html"
-feedID: "https://blog.merovius.de//2014/01/23/signed-blog-posts.html"
+omitFeed: true
 title: Signed blog posts
 summary: I sign my blog posts.
 ---

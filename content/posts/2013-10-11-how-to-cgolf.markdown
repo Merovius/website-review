@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2013/10/11/how-to-cgolf.html"
-feedID: "https://blog.merovius.de//2013/10/11/how-to-cgolf.html"
+omitFeed: true
 title: How to C-Golf
 summary: We had a codegolf challenge recently. My C-solution was 246 byte, the perl-winner
   was 191. I decided to give notes for C-golf beginners.

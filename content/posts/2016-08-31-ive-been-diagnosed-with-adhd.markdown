@@ -4,7 +4,7 @@ tags:
 - personal
 aliases:
 - "/2016/08/31/ive-been-diagnosed-with-adhd.html"
-feedID: "https://blog.merovius.de//2016/08/31/ive-been-diagnosed-with-adhd.html"
+omitFeed: true
 title: I've been diagnosed with ADHD
 summary: I've been diagnosed with ADHD. I ramble incoherently for a while and I might
   do some less rambling posts about it in the future.

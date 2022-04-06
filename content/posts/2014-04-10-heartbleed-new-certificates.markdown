@@ -4,7 +4,7 @@ tags:
 - meta
 aliases:
 - "/2014/04/10/heartbleed-new-certificates.html"
-feedID: "https://blog.merovius.de//2014/04/10/heartbleed-new-certificates.html"
+omitFeed: true
 title: 'Heartbleed: New certificates'
 summary: Updating my TLS-certificates due to Heartbleed.
 ---

@@ -6,7 +6,7 @@ tags:
 - thoughtleading
 aliases:
 - "/2018/01/21/what_even_is_error_handling.html"
-feedID: "https://blog.merovius.de//2018/01/21/what_even_is_error_handling.html"
+omitFeed: true
 title: What even is error handling?
 summary: I philosophize about error handling, what it actually means and how to characterize
   Go's approach to it.

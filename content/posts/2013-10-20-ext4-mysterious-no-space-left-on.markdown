@@ -4,7 +4,7 @@ tags:
 - linux
 aliases:
 - "/2013/10/20/ext4-mysterious-no-space-left-on.html"
-feedID: "https://blog.merovius.de//2013/10/20/ext4-mysterious-no-space-left-on.html"
+omitFeed: true
 title: 'ext4: Mysterious “No space left on device”-errors'
 summary: ext4 has a feature called dir_index enabled by default, which is quite susceptible
   to hash-collisions

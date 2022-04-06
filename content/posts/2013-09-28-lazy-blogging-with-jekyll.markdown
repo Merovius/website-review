@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2013/09/28/lazy-blogging-with-jekyll.html"
-feedID: "https://blog.merovius.de//2013/09/28/lazy-blogging-with-jekyll.html"
+omitFeed: true
 title: Lazy blogging with jekyll
 summary: I put up a small script to automate creating blog-posts in jekyll
 ---

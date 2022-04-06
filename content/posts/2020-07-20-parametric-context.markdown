@@ -6,7 +6,7 @@ tags:
 time: "2020-07-20 21:45:00"
 aliases:
 - "/2020/07/20/parametric-context.html"
-feedID: "https://blog.merovius.de//2020/07/20/parametric-context.html"
+omitFeed: true
 title: Parametric context
 summary: Go's Context.Value is controversial because of a lack of type-safety. I design
   a solution for that based on the new generics design draft.

@@ -4,7 +4,7 @@ tags:
 - linux
 aliases:
 - "/2013/10/20/using-i3-and-vim-to-keep-a-set-o.html"
-feedID: "https://blog.merovius.de//2013/10/20/using-i3-and-vim-to-keep-a-set-o.html"
+omitFeed: true
 title: Using i3 and vim to keep a set of notes at hand
 summary: Put a terminal with a vim-instance in an i3-scratchpad, combine it with autosave-when-idle
   and you got the perfect note keeping workflow."

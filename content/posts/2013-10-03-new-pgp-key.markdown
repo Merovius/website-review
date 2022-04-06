@@ -5,7 +5,7 @@ tags:
 - meta
 aliases:
 - "/2013/10/03/new-pgp-key.html"
-feedID: "https://blog.merovius.de//2013/10/03/new-pgp-key.html"
+omitFeed: true
 title: New PGP Key
 ---
 

@@ -5,7 +5,7 @@ tags:
 - python
 aliases:
 - "/2014/05/06/python-fnord-of-the-day.html"
-feedID: "https://blog.merovius.de//2014/05/06/python-fnord-of-the-day.html"
+omitFeed: true
 title: Python-fnord of the day
 summary: An unexpected behavior of python that surprised me today.
 ---

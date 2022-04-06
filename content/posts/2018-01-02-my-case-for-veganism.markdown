@@ -5,7 +5,7 @@ tags:
 - veganism
 aliases:
 - "/2018/01/02/my-case-for-veganism.html"
-feedID: "https://blog.merovius.de//2018/01/02/my-case-for-veganism.html"
+omitFeed: true
 title: My case for veganism
 summary: I make a case for veganism and why you probably already agree with all the reasons
   you should be vegan. And how I wish people would reframe the topic, to make it less

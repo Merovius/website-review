@@ -4,7 +4,7 @@ tags:
 - programming
 aliases:
 - "/2015/04/13/difficulties-making-sql-based-au.html"
-feedID: "https://blog.merovius.de//2015/04/13/difficulties-making-sql-based-au.html"
+omitFeed: true
 title: SQL authentication timing side-channels
 summary: It is surprisingly hard to make SQL-based authentication immune to timing side-channels,
   if you want to prevent enumeration of users.

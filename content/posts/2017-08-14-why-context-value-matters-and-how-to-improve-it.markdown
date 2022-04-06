@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2017/08/14/why-context-value-matters-and-how-to-improve-it.html"
-feedID: "https://blog.merovius.de//2017/08/14/why-context-value-matters-and-how-to-improve-it.html"
+omitFeed: true
 title: Why context.Value matters and how to improve it
 summary: In light of recent discussions about its removal, I try to discuss what kinds
   of problems context.Value tries to solve. I then try to describe a design which

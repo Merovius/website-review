@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2018/01/15/generating_entropy_without_imports_in_go.html"
-feedID: "https://blog.merovius.de//2018/01/15/generating_entropy_without_imports_in_go.html"
+omitFeed: true
 title: Generating entropy without imports in Go
 summary: I come up with a couple of useless, but entertaining ways to generate entropy
   without relying on any packages.

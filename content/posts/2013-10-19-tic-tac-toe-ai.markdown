@@ -4,7 +4,7 @@ tags:
 - programming
 aliases:
 - "/2013/10/19/tic-tac-toe-ai.html"
-feedID: "https://blog.merovius.de//2013/10/19/tic-tac-toe-ai.html"
+omitFeed: true
 title: Tic Tac Toe AI
 summary: I wrote a simple Tic Tac Toe AI as an exercise. You can get it on github.
 ---

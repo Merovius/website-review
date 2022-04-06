@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2014/08/12/applying-permutation-in-constant.html"
-feedID: "https://blog.merovius.de//2014/08/12/applying-permutation-in-constant.html"
+omitFeed: true
 title: Applying permutation in constant space (and linear time)
 summary: A mildly interesting algorithmic problem and my solution to it.
 ---

@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2015/07/17/lazy-evaluation-in-go.html"
-feedID: "https://blog.merovius.de//2015/07/17/lazy-evaluation-in-go.html"
+omitFeed: true
 title: Lazy evaluation in go
 summary: I did lazy evaluation in go.
 ---

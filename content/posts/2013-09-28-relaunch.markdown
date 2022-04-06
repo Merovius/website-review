@@ -4,7 +4,7 @@ tags:
 - meta
 aliases:
 - "/2013/09/28/relaunch.html"
-feedID: "https://blog.merovius.de//2013/09/28/relaunch.html"
+omitFeed: true
 title: Relaunch
 summary: The (n+1)th launch of my blog
 ---

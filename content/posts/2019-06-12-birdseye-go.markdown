@@ -6,7 +6,7 @@ tags:
 time: "2019-06-12 09:03:51"
 aliases:
 - "/2019/06/12/birdseye-go.html"
-feedID: "https://blog.merovius.de//2019/06/12/birdseye-go.html"
+omitFeed: true
 title: A bird's eye view of Go
 summary: I provide a very high-level overview of what Go-the-language means vs. Go-the-ecosystem
   vs. Go-an-implementation. I also try to provide specific references to what documentation

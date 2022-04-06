@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2018/06/03/why-doesnt-go-have-variance-in.html"
-feedID: "https://blog.merovius.de//2018/06/03/why-doesnt-go-have-variance-in.html"
+omitFeed: true
 title: Why doesn't Go have variance in its type system?
 summary: I explain what co-, contra- and invariance are and what the implications for
   Go's type system would be. In particular, why it's impossible to have variance in

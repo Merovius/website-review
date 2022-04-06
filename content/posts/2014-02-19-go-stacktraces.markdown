@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2014/02/19/go-stacktraces.html"
-feedID: "https://blog.merovius.de//2014/02/19/go-stacktraces.html"
+omitFeed: true
 title: go stacktraces
 summary: A small pattern to add stacktraces to errors.
 ---

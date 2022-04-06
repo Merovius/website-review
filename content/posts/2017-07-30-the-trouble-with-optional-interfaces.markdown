@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2017/07/30/the-trouble-with-optional-interfaces.html"
-feedID: "https://blog.merovius.de//2017/07/30/the-trouble-with-optional-interfaces.html"
+omitFeed: true
 title: The trouble with optional interfaces
 summary: 'I take a look at the pattern of optional interfaces in Go: what they are used
   for, why they are bad and what we can do about it.'

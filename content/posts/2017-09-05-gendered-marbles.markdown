@@ -2,7 +2,7 @@
 date: "2017-09-05T23:22:00Z"
 aliases:
 - "/2017/09/05/gendered-marbles.html"
-feedID: "https://blog.merovius.de//2017/09/05/gendered-marbles.html"
+omitFeed: true
 title: Gendered Marbles
 summary: Some marbles, apparently, have a gender. And they seem to be overwhelmingly
   male.

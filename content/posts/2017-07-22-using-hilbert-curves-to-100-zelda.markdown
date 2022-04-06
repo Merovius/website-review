@@ -7,7 +7,7 @@ tags:
 - zelda
 aliases:
 - "/2017/07/22/using-hilbert-curves-to-100-zelda.html"
-feedID: "https://blog.merovius.de//2017/07/22/using-hilbert-curves-to-100-zelda.html"
+omitFeed: true
 title: Using Hilbert Curves to 100% Zelda
 summary: Using math, I made it a lot easier to find the last undiscovered parts of my
   Zelda - Breath Of The Wild map.

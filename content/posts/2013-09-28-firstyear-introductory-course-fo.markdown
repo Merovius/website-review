@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2013/09/28/firstyear-introductory-course-fo.html"
-feedID: "https://blog.merovius.de//2013/09/28/firstyear-introductory-course-fo.html"
+omitFeed: true
 title: First-year introductory course for programming
 summary: I gave a very introductory programming course and saw once again how the basic
   ideas underlying the modernization of teaching just work when implemented right.

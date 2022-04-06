@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2015/07/29/backwards-compatibility-in-go.html"
-feedID: "https://blog.merovius.de//2015/07/29/backwards-compatibility-in-go.html"
+omitFeed: true
 title: Backwards compatibility in go
 summary: There are next to no "backwards compatible API changes" in go. You should explicitely
   name your compatibility-guarantees.

@@ -4,7 +4,7 @@ tags:
 - programming
 aliases:
 - "/2014/06/22/gpn14-gamejam--crazy-cat-lady.html"
-feedID: "https://blog.merovius.de//2014/06/22/gpn14-gamejam-crazy-cat-lady.html"
+omitFeed: true
 title: GPN14 GameJam - Crazy cat lady
 summary: We made a gamejam-game.
 ---

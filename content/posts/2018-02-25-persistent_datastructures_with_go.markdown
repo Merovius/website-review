@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2018/02/25/persistent_datastructures_with_go.html"
-feedID: "https://blog.merovius.de//2018/02/25/persistent_datastructures_with_go.html"
+omitFeed: true
 title: Persistent datastructures with Go
 summary: I present a couple of patterns that help modelling persistent datastructures
   in Go. I also apply them to three examples.

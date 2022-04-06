@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2014/09/12/the-four-things-i-miss-from-go.html"
-feedID: "https://blog.merovius.de//2014/09/12/the-four-things-i-miss-from-go.html"
+omitFeed: true
 title: The four things I miss about go
 summary: A short list of four things that I might want to add to go (but probably wouldn't).
 ---

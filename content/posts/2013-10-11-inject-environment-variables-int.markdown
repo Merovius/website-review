@@ -4,7 +4,7 @@ tags:
 - linux
 aliases:
 - "/2013/10/11/inject-environment-variables-int.html"
-feedID: "https://blog.merovius.de//2013/10/11/inject-environment-variables-int.html"
+omitFeed: true
 title: Inject Environment variables into running processes
 summary: Using gdb to manipulate a running process is fun and just the right amount of
   danger to be exiting

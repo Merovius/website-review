@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2017/09/12/diminishing-returns-of-static-typing.html"
-feedID: "https://blog.merovius.de//2017/09/12/diminishing-returns-of-static-typing.html"
+omitFeed: true
 title: Diminishing returns of static typing
 summary: When talking about static type systems, we often tend to focus on one side of
   the equation. I'm trying to make explicit how I view the question as a tradeoff

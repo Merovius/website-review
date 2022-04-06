@@ -20,7 +20,7 @@
 	"author": { "name": "{{ .Site.Params.author }}" },
 	{{- end -}}
     "items": [
-	{{ range $i, $_ := $pages -}}
+	{{ range $i, $_ := where $pages "Params.omitFeed" "!=" "true" -}}
 		{
 			"id": {{ with .Params.feedID }}{{ . | jsonify }}{{ else }}{{ .Permalink | jsonify }}{{ end }},
 			"title": {{ .Title | plainify | jsonify }},

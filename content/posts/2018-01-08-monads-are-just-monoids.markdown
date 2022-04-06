@@ -6,7 +6,7 @@ tags:
 - programming
 aliases:
 - "/2018/01/08/monads-are-just-monoids.html"
-feedID: "https://blog.merovius.de//2018/01/08/monads-are-just-monoids.html"
+omitFeed: true
 title: Monads are just monoids in the category of endofunctors
 summary: I explain the mathematical background of a joke-explanation of monads. Contains
   lots of math and a hasty introduction to category theory

@@ -17,7 +17,7 @@
 	<author>
 		<name>{{ .Site.Author.name }}</name>
 	</author>
-    {{ range $pages -}}
+    {{ range where $pages "Params.omitFeed" "!=" "true" -}}
     <entry>
 		<title type="html">{{ .Title | safeHTML }}</title>
         <link href="{{ .Permalink }}" rel="alternate" type="text/html" />

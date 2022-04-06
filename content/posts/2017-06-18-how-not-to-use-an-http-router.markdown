@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2017/06/16/how-not-to-use-an-http-router.html"
-feedID: "https://blog.merovius.de//2017/06/18/how-not-to-use-an-http-router.html"
+omitFeed: true
 title: How to not use an http-router in go
 summary: Trying to provide some advice on how to do easy, readable, scalable routing
   in go, without relying on any muxers/routers (or writing your own).

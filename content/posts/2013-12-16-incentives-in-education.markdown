@@ -4,7 +4,7 @@ tags:
 - education
 aliases:
 - "/2013/12/16/incentives-in-education.html"
-feedID: "https://blog.merovius.de//2013/12/16/incentives-in-education.html"
+omitFeed: true
 title: Incentives in education
 summary: I hate software-engineering as it is teached in Heidelberg. Really.
 ---

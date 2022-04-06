@@ -5,7 +5,7 @@ tags:
 - programming
 aliases:
 - "/2018/09/05/scrapping_contracts.html"
-feedID: "https://blog.merovius.de//2018/09/05/scrapping_contracts.html"
+omitFeed: true
 title: Scrapping contracts
 summary: I describe a way to simplify the generics design. The ideas are not particularly
   novel and have been expressed to various degrees by other people as well. I hope

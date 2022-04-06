@@ -6,7 +6,7 @@ tags:
 - programming
 aliases:
 - "/2018/10/10/using-roughtime-as-a-cryptographic-notary.html"
-feedID: "https://blog.merovius.de//2018/10/18/using-roughtime-as-a-cryptographic-notary.html"
+omitFeed: true
 title: Using roughtime as a "cryptographic notary"
 summary: Roughtime can be (ab)used for Trusted Timestamping. I wrote a simple tool as
   a PoC

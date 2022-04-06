@@ -5,7 +5,7 @@ tags:
 - veganism
 aliases:
 - "/2017/10/20/a-day-in-the-life-of-an-omnivore.html"
-feedID: "https://blog.merovius.de//2017/10/20/a-day-in-the-life-of-an-omnivore.html"
+omitFeed: true
 title: A day in the life of an Omnivore
 summary: I take a toung-in-cheek look at how I imagine the life of a meat eater to look.
   At least based on my own experience.
