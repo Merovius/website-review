@@ -1,1 +1,0 @@
-jekyll-rss/rssgenerator.rb

@@ -1,1 +1,0 @@
-mathjax/Jekyll nd Octopress Liquid tag for MathJax.rb

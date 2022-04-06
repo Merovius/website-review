@@ -1,0 +1,48 @@
+baseURL: "https://blog.merovius.de/"
+author:
+  name: "Axel Wagner"
+disablePathToLower: true
+languageCode: "en-us"
+title: "Mero's Blog"
+theme: "PaperMod"
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+mediaTypes:
+  "application/atom+xml":
+    suffixes: ["xml"]
+taxonomies:
+  tag: "tags"
+outputFormats:
+  RSS:
+    baseName: "rss"
+    suffix: "xml"
+    isPlainText: true
+    mediaType: "application/rss+xml"
+  jsonfeed:
+    baseName: "feed"
+    suffix: "json"
+    isPlainText: true
+    mediaType: "application/json"
+  ATOM:
+    baseName: "atom"
+    suffix: "xml"
+    isPlainText: true
+    isHTML: false
+    mediaType: "application/atom+xml"
+outputs:
+  home:
+  - HTML
+  - RSS
+  - ATOM
+  - jsonfeed
+  section:
+  - HTML
+  page:
+  - HTML
+  term:
+  - HTML
+  - ATOM
+  - RSS
+  - jsonfeed

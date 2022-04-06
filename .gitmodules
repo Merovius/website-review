@@ -1,9 +1,3 @@
-[submodule "mathjax"]
-	path = jekyll/_plugins/mathjax
-	url = https://gist.github.com/834610.git
-[submodule "sitemap_generator"]
-	path = jekyll/_plugins/sitemap_generator
-	url = https://github.com/Merovius/sitemap_generator
-[submodule "jekyll-rss"]
-	path = jekyll/_plugins/jekyll-rss
-	url = https://github.com/Merovius/jekyll-rss.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod

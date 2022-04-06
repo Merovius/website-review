@@ -1,0 +1,24 @@
+---
+date: "2013-09-28T02:08:05Z"
+tags:
+- meta
+aliases:
+- "/2013/09/28/relaunch.html"
+feedID: "https://blog.merovius.de//2013/09/28/relaunch.html"
+title: Relaunch
+summary: The (n+1)th launch of my blog
+---
+
+Years ago I took down my blog because I was so unsatisfied with
+wordpress. In these years I started about 5 times to write my own
+git-based blog-engine and about 5 times I stopped after making
+considerable progress (mostly because it was too hard to integrate
+comments). This time the urge to restart my blog is finally
+overpowering my chronic nii-syndrome and I decided to use
+[jekyll](http://jekyllrb.com/) as a blog-engine and add some git-hook-magic myself.
+
+The layout is still pretty shitty, it's the default of jekyll, but I
+wanted to put it online before seing my efforts die again on such
+minor details.
+
+So this is finally the relaunch of my blog. Yay for me.

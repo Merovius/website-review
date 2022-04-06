@@ -1,0 +1,38 @@
+{{- $pctx := . -}}
+{{- $pages := slice -}}
+{{- if $.IsHome }}
+{{- $pages = where $pctx.Site.RegularPages "Section" "posts" }}
+{{- else -}}
+{{- $pages = $pctx.Pages -}}
+{{- end -}}
+{{- $pages = $pages | first 10 -}}
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "{{ .Site.Title }}",
+    "home_page_url": "{{ .Site.BaseURL }}",
+	{{ with  .OutputFormats.Get "JSON" -}}
+	"feed_url": "{{.Permalink}}",
+	{{- end -}}
+	{{ if isset .Site.Params "description" -}}
+	"description": "{{ .Site.Params.description }}",
+	{{- end -}}
+	{{- if isset .Site.Params "author" -}}
+	"author": { "name": "{{ .Site.Params.author }}" },
+	{{- end -}}
+    "items": [
+	{{ range $i, $_ := $pages -}}
+		{
+			"id": {{ with .Params.feedID }}{{ . | jsonify }}{{ else }}{{ .Permalink | jsonify }}{{ end }},
+			"title": {{ .Title | plainify | jsonify }},
+			"content_text": {{ .Summary | plainify | jsonify }},
+			"url": {{ .Permalink | jsonify }},
+			"date_published": {{ .PublishDate.UTC.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+			"date_modified" : {{ .Lastmod.UTC.Format "2006-01-02T15:04:05Z07:00" | jsonify }}
+			{{ with .Params.tags -}}
+			,"tags": {{ jsonify . }}
+			{{ end }}
+		}
+		{{- if ne $i (sub (len $pages) 1) }},{{end}}
+	{{- end }}
+    ]
+}
