@@ -8,7 +8,7 @@
 {{- $pages = $pages | first 10 -}}
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "{{ .Site.Title }}",
+    "title": {{ if ne .Title .Site.Title }}{{ printf "%s on %s" .Title .Site.Title | jsonify }}{{ else }}{{ .Site.Title | jsonify }}{{ end }},
     "home_page_url": "{{ .Site.BaseURL }}",
 	{{ with  .OutputFormats.Get "JSON" -}}
 	"feed_url": "{{.Permalink}}",

@@ -9,7 +9,7 @@
 {{ printf `<?xml version="1.0" encoding="utf-8"?>` | safeHTML }} {{/* ref: https://validator.w3.org/feed/docs/atom.html */}}
 <feed xmlns="http://www.w3.org/2005/Atom"{{ with site.LanguageCode }} xml:lang="{{ . }}"{{ end }}>
     <generator uri="https://gohugo.io/" version="{{ hugo.Version }}">Hugo</generator>
-	<title type="html"><![CDATA[{{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{. | safeHTML}} {{ end }}{{ end }}on {{ .Site.Title | safeHTML }}]]></title>
+	<title type="html"><![CDATA[{{ if ne  .Title  .Site.Title }}{{ with .Title }}{{. | safeHTML}} on {{ end }}{{ end }}{{ .Site.Title | safeHTML }}]]></title>
 	<link href="{{ .Permalink }}"/>
 	<link type="application/atom+xml" rel="self" href="{{ .Permalink }}atom.xml"/>
     <updated>{{ now.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
