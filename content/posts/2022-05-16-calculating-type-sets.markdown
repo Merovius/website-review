@@ -60,7 +60,7 @@ into two big classes:
 
 1. Problems which can be *solved* reasonably efficiently. This class is called
    P.
-2. Problems which can be *decided* reasonably efficiently. This class is called
+2. Problems which can be *verified* reasonably efficiently. This class is called
    NP.
 
 The first obvious follow up question is “what does ‘reasonably efficient’
@@ -68,13 +68,13 @@ mean?”. The answer to that is “there is an algorithm with a running time
 polynomial in its input size”[^1].
 
 The second obvious follow up question is “what's the difference between
-‘solving’ and ‘deciding’?”.
+‘solving’ and ‘verifying’?”.
 
 *Solving* a problem means what you think it means: Finding a solution. If I
 give you a number and ask you to solve the factorization problem, I'm asking
 you to find a (non-trivial) factor of that number.
 
-*Deciding* a problem means that I give you a solution and I'm asking you if the
+*Verifying* a problem means that I give you a solution and I'm asking you if the
 solution is correct. For the factorization problem, I'd give you two numbers
 and ask you to verify that the second is a factor of the first.
 
@@ -85,11 +85,11 @@ ask you to verify that 9883 is a factor of that number, you just have to do a
 bit of long division and it either divides it, or it does not.
 
 It turns out, that every problem which is efficiently *solvable* is also
-efficiently *decidable*. You can just calculate the solution and compare it to
+efficiently *verifiable*. You can just calculate the solution and compare it to
 the given one. So every problem in P is also in NP[^2]. But it is
 [a famously open question](https://en.wikipedia.org/wiki/P_versus_NP_problem)
 whether the opposite is true - that is, we don't really *know*, if there are
-problems which are hard to solve but easy to decide.
+problems which are hard to solve but easy to verify.
 
 This is hard to know in general. Because us not having *found* an efficient
 algorithm to solve a problem does not mean *there is none*. But in practice we
@@ -594,14 +594,14 @@ suggestions were invaluable.
     NP doesn't mean “not polynomial” though. It means “non-deterministic
     polynomial”. A non-deterministic computer, in this context, is a
     hypothetical machine which can run arbitrarily many computations
-    simultaneously. A program which can be *decided* efficiently by any
+    simultaneously. A program which can be *verified* efficiently by any
     computer can be *solved* efficiently by a non-deterministic one. It just
     tries out all possible solutions at the same time and returns a correct
     one.
 
-    Thus, being able to decide a problem on a normal computer means being
+    Thus, being able to verify a problem on a normal computer means being
     able to solve it on a non-deterministic one. That is why the two
-    definitions of NP “decidable by a classical computer” and “solvable by a
+    definitions of NP “verify by a classical computer” and “solvable by a
     non-deterministic computer” mean the same thing.
 
 [^3]: You might complain that it is hard to remember if the “disjunctive normal
