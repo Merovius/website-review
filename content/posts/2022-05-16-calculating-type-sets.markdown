@@ -235,7 +235,7 @@ func MakeSet(f func(T) bool) Set[T] {
 ```
 
 This set contains exactly all elements for which `f` is `true`. So calculating
-`f(v)` is equivalent to checking `s.Contains(f)`. And checking if `s` is empty
+`f(v)` is equivalent to checking `s.Contains(v)`. And checking if `s` is empty
 is equivalent to checking if `f` can ever return `true`.
 
 We can also go the other way around:
