@@ -207,9 +207,9 @@ is NP-complete[^4].
 [It turns out](https://en.wikipedia.org/wiki/Functional_completeness) that
 *every* boolean function can be written as a single expression using only `||`, `&&` and `!`. In particular, every boolean function has a DNF and a CNF.
 
-Very often, when we want to prove a problem is hard, we do so by reducing it to
-CNFSAT. That's what we will do for the problem of calculating type sets. But
-there is one more preamble we need.
+Very often, when we want to prove a problem is hard, we do so by reducing
+CNFSAT to it. That's what we will do for the problem of calculating type sets.
+But there is one more preamble we need.
 
 ## Sets and Satisfiability
 
