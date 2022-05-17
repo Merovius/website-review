@@ -25,8 +25,8 @@ explanations at times, that are not all that helpful.
 However, given my background in mathematics, I decided that I wanted to
 actually approach Haskell from this point of view: I am interested in how it
 uses math to model programming and also to, after several years of doing mostly
-engineering focused programming work, flex my math muscles again
-- as there is quite a bit of interesting math behind these concepts.
+engineering focused programming work, flex my math muscles again - as there is
+quite a bit of interesting math behind these concepts.
 
 The quote is from a pretty popular [book about category
 theory](http://www.maths.ed.ac.uk/~aar/papers/maclanecat.pdf) and is, in full:
