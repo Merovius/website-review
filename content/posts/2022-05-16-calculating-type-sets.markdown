@@ -601,7 +601,7 @@ suggestions were invaluable.
 
     Thus, being able to verify a problem on a normal computer means being
     able to solve it on a non-deterministic one. That is why the two
-    definitions of NP “verify by a classical computer” and “solvable by a
+    definitions of NP “verifiable by a classical computer” and “solvable by a
     non-deterministic computer” mean the same thing.
 
 [^3]: You might complain that it is hard to remember if the “disjunctive normal
