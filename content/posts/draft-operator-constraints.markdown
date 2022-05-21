@@ -64,15 +64,15 @@ simple types like `time.Duration`. It also is very clear.
 
 The main disadvantage is that it does not allow composite types like `struct`s.
 And what if a user want a different sorting order than the one implied by `<`?
-For example, if they want to reverse the order or want specialized string
-collation. For example, a multimedia library might want to sort “The Expanse”
-under E. Or some letters sort differently depending on the language setting.
+For example if they want to reverse the order or want specialized string
+collation. A multimedia library might want to sort “The Expanse” under E. And
+some letters sort differently depending on the language setting.
 
 `constraints.Ordered` is simple, but it also is inflexible.
 
 ## Method constraints
 
-To allow more flexibility, we can use method constraints. This allows a user to
+We can use method constraints to allow more flexibility. This allows a user to
 implement whatever sorting order they want as a method on their type.
 
 We can write that constraint like this:
@@ -84,8 +84,9 @@ type Lesser[T any] interface {
 }
 ```
 
-The type parameter is necessary, because we have to refer to the type itself in
-the `Less` method. This is hopefully clearer when we look at how this is used:
+The type parameter is necessary because we have to refer to the receiver type
+itself in the `Less` method. This is hopefully clearer when we look at how this
+is used:
 
 ```go
 func Sort[T Lesser[T]](s []T) {
@@ -108,48 +109,22 @@ func (i ReverseInt) Less(j ReverseInt) bool {
 }
 ```
 
-You can also make this easier by providing some helper types. E.g.
-
-```go
-// Reversed[T] is T in reverse sorting order.
-type Reversed[T Lesser[T]] T
-
-func Less(a Reversed[T]) (b Reversed[T]) bool {
-  return b < a
-}
-```
-
-Which can then be used as
-
-```go
-type MyInt int
-
-func (i MyInt) Less(j MyInt) bool {
-  return i < j
-}
-
-func main() {
-  a := []MyInt{42,23,1337}
-  Sort[Reversed[MyInt]](a)
-}
-```
-
 The disadvantage of this is that it requires some boiler plate on part of your
 user. Using a custom sorting order always requires defining a type with a method.
 
-They can't use your code with predeclared types like `int` or `string`, but
+They can't use your code with predeclared types like `int` or `string` but
 always have to wrap it into a new type.
 
-Likewise, if a type already has a natural comparison method, but it is not
-called `Less` (for example, `time.Before`) there needs to be a wrapper to
-rename the method.
+Likewise, if a type already has a natural comparison method but it is not
+called `Less`. For example `time.Time` is naturally sorted by
+`time.Time.Before`. For cases like that there needs to be a wrapper to rename
+the method.
 
-Whenever one of these wrappings happens (the same applies to `Reversed[T]`),
-your user might have to convert back and forth when passing data to or from
-your code.
+Whenever one of these wrappings happens your user might have to convert back
+and forth when passing data to or from your code.
 
-It also is a little bit more confusing than `constraints.Ordered`, because your
-user has to understand the purpose of the extra type parameter on `Lesser`.
+It also is a little bit more confusing than `constraints.Ordered`, as your user
+has to understand the purpose of the extra type parameter on `Lesser`.
 
 ## Passing a comparison function
 
@@ -181,7 +156,7 @@ works with *any* type and we directly pass around the custom behavior as
 `func`s are compatible.
 
 The advantage of this is maximum flexibility. Any type which already has a
-`Less` method like above can simply be used with this directly, by using
+`Less` method like above can simply be used with this directly by using
 [method expressions](https://go.dev/ref/spec#Method_expressions). Regardless of
 how the method is actually named:
 
@@ -203,7 +178,7 @@ func main() {
 }
 ```
 
-And again, you can provide helpers for common customizations:
+And you can provide helpers for common customizations:
 
 ```go
 func Reversed[T any](less func(T, T) bool) (greater func(T, T) bool) {
@@ -221,10 +196,10 @@ container or taking it out again.
 
 The main *disadvantage* of this approach is that it means you can not have
 useful zero values. Your `SearchTree` type needs the `Less` field to be
-populated to work.
+populated to work. So its zero value can not be used to represent an empty set.
 
 You can not even lazily initialize it (which is a common trick to make types
-which need initialization have a useful zero value), because *you don't know
+which need initialization have a useful zero value) because *you don't know
 what it should be*.
 
 ## Comparator types
@@ -258,13 +233,13 @@ type Comparator[T any] interface {
   Less(a, b T) bool
 }
 
-func Sort[T any, C Comparator[T]](a []T) {
+func Sort[C Comparator[T], T any](a []T) {
   var c C
   less := c.Less // has type func(T, T) bool
   // …
 }
 
-type SearchTree[T any, C Comparator[T]] struct {
+type SearchTree[C Comparator[T], T any] struct {
   // …
 }
 ```
@@ -276,12 +251,13 @@ purposes here:
 1. It makes clear that `Comparator[T]` itself is not supposed to carry any
    state. It only exists to have its method called.
 2. It ensures (as much as possible) that the zero value of `C` is safe to use.
-   In particular, it prevents `Comparator[T]` itself to instantiate a type
-   parameter constrained on it, which would have a `nil` zero value which would
-   panic when `c.Less` is called.
+   In particular, `Comparator[T]` would be a normal interface type. And it
+   would have a `Less` method of the right type, so it would implement itself.
+   But a zero `Comparator[T]` is `nil` and would always panic, if its method is
+   called.
 
-You can again provide helpers, for example to combine this approach with the
-above ones:
+You can again provide helpers. This can also be used to combine this approach
+with the above ones:
 
 ```go
 type LessOperator[T constraints.Ordered] struct{}
@@ -296,25 +272,27 @@ func (LessMethod[T]) Less(a, b T) bool {
   return a.Less(b)
 }
 
-type Reversed[T any, C Comparator[T]] struct{}
+type Reversed[C Comparator[T], T any] struct{}
 
-func (Reversed[T, C]) Less(a, b T) bool {
+func (Reversed[C, T]) Less(a, b T) bool {
   var c C
   return c.Less(b, a)
 }
 ```
 
 The advantage of this approach is that it makes the zero value of
-`SearchTree[T, C]` useful. For example, a `SearchTree[int, LessOperator[int]]`
-can be used directly, without any initialization.
+`SearchTree[C, T]` useful. For example, a `SearchTree[LessOperator[int], int]`
+can be used directly, without extra initialization.
 
 It also carries over the advantage of decoupling the comparison from the
-element type, which we got from taking comparison functions.
+element type, which we got from accepting comparison functions.
 
 One disadvantage is that the comparator can never be inferred. It always has to
-be specified in the instantiation explicitly (though we could infer the element
-type from the comparator). That's similar to how we always had to pass a `less`
-function explicitly above.
+be specified in the instantiation explicitly[^1]. That's similar to how we
+always had to pass a `less` function explicitly above.
+
+[^1]: Though as we put the `Comparator[T]` type parameter first, we can infer
+      `T` from the `Comparator`.
 
 Another disadvantage is that this *always* requires defining a type for
 comparisons. Where with the comparison function we could define customizations
@@ -334,13 +312,14 @@ We are left with these trade-offs:
 | Predeclared types        | 👍 | 👎     | 👎 | 👎 |
 | Composite types          | 👎 | 👍     | 👍 | 👍 |
 | Custom order             | 👎 | 👍     | 👍 | 👍 |
+| Reversal helpers         | 👍 | 👎     | 👍 | 👍 |
 | Type boilerplate         | 👍 | 👎     | 👍 | 👎 |
 | Useful zero value        | 👍 | 👍     | 👎 | 👍 |
 | Type inference           | 👍 | 👍     | 👍 | 👎 |
 | Coupled Type/Order       | 👎 | 👎     | 👍 | 👍 |
-| Clarity                  | 👍 | 🤷[^1] | 👍 | 👎 |
+| Clarity                  | 👍 | 🤷[^2] | 👍 | 👎 |
 
-[^1]: It's a *little* bit worse, but probably fine.
+[^2]: It's a *little* bit worse, but probably fine.
 
 One thing standing out in this table is that there is no way to *both* support
 predeclared types *and* support user defined types.
@@ -366,3 +345,5 @@ a `constraints.Ordered` version and a comparison function version.  The latter
 gets a `Func` suffix to the name. See
 [the experimental `slices` package](https://pkg.go.dev/golang.org/x/exp/slices)
 for an example.
+
+
