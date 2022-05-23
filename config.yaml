@@ -16,10 +16,14 @@ params:
       url: "https://github.com/Merovius"
     - name: "Reddit"
       url: "https://www.reddit.com/user/TheMerovius"
+  assets:
+    disableHLJS: true
 markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    noClasses: false
 mediaTypes:
   "application/atom+xml":
     suffixes: ["xml"]
