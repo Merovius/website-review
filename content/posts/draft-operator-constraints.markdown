@@ -18,10 +18,6 @@ about four in particular here:
 3. Taking a comparison function
 4. Comparator types
 
-I believe the fourth is a novel idea. At least I don't think I have seen it
-come up in a discussion about Go so far. Though I think I have seen it used in
-other languages.
-
 ## `constraints.Ordered`
 
 Go 1.18 has a mechanism to constrain a type parameter to all types which have
