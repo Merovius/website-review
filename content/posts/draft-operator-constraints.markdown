@@ -24,7 +24,7 @@ other languages.
 
 ## `constraints.Ordered`
 
-Go 1.18 has a mechanism to constraint a type parameter to all types which have
+Go 1.18 has a mechanism to constrain a type parameter to all types which have
 the `<` operator defined on them. The types which have this operator are
 exactly all types whose underlying type is `string` or one of the predeclared
 integer and float types. So we can write a type set expressing that:
@@ -115,7 +115,7 @@ user. Using a custom sorting order always requires defining a type with a method
 They can't use your code with predeclared types like `int` or `string` but
 always have to wrap it into a new type.
 
-Likewise, if a type already has a natural comparison method but it is not
+Likewise if a type already has a natural comparison method but it is not
 called `Less`. For example `time.Time` is naturally sorted by
 `time.Time.Before`. For cases like that there needs to be a wrapper to rename
 the method.
@@ -198,7 +198,7 @@ The main *disadvantage* of this approach is that it means you can not have
 useful zero values. Your `SearchTree` type needs the `Less` field to be
 populated to work. So its zero value can not be used to represent an empty set.
 
-You can not even lazily initialize it (which is a common trick to make types
+You cannot even lazily initialize it (which is a common trick to make types
 which need initialization have a useful zero value) because *you don't know
 what it should be*.
 
