@@ -256,7 +256,11 @@ purposes here:
    But a zero `Comparator[T]` is `nil` and would always panic, if its method is
    called.
 
-You can again provide helpers. This can also be used to combine this approach
+An implication of this is that it is not possible to have a `Comparator[T]`
+which uses an arbitrary `func` value. The `Less` method can not rely on having
+access to a `func` to call, for this approach to work.
+
+But you can provide other helpers. This can also be used to combine this approach
 with the above ones:
 
 ```go
