@@ -1,1 +1,2 @@
-<link rel="preload stylesheet" href="/assets/css/syntax.css">
+{{ $style := resources.Get "css/syntax.css" | resources.Minify | resources.Fingerprint "sha512" }}
+<link rel="preload stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
