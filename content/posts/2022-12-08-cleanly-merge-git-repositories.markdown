@@ -191,7 +191,7 @@ pointing at the Commit we created.
 And that's it. We can now treat the repository as a normal git repo. All that
 is left is to publish it:
 
-```sh
+```bash
 $ git remote add origin git@github.com:Merovius/AdventOfCode
 $ git push --set-upstream origin main
 ```
@@ -208,7 +208,7 @@ To summarize the steps I did:
     $ cd merged
     ```
 3. Add the old repositories as remotes for the merged repo:
-    ```
+    ```bash
     $ git remote add <repo1> /path/to/repo1
     $ git fetch repo1
     $ git remote add <repo2> /path/to/repo2
@@ -216,13 +216,13 @@ To summarize the steps I did:
     $ # …
     ```
 4. Copy files from old repositories into merged repo:
-    ```
+    ```bash
     $ cp -r /path/to/repo1/* .
     $ cp -r /path/to/repo2/* .
     $ # …
     ```
 5. Create commit using plumbing commands:
-    ```
+    ```bash
     $ git add .
     $ TREE=$(git write-tree)
     $ COMMIT=$(git commit-tree $TREE \
