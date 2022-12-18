@@ -14,6 +14,8 @@ params:
       url: "https://github.com/Merovius"
     - name: "Reddit"
       url: "https://www.reddit.com/user/TheMerovius"
+    - name: "BookWyrm"
+      url: "https://bookwyrm.social/user/Merovius"
   assets:
     disableHLJS: true
 markup:
