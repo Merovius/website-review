@@ -14,6 +14,11 @@ summary: Go's Context.Value is controversial because of a lack of type-safety. I
 
 **tl;dr: Go's Context.Value is controversial because of a lack of type-safety. I design a solution for that based on the new generics design draft.**
 
+**Update: With the
+[generics design that made it into Go 1.18](https://go.dev/doc/tutorial/generics)
+these ideas do not work, as embedding a type parameter is disallowed. I'm still
+leaving it up, for posterity**
+
 If you are following what's happening with Go, you are aware that recently
 [an updated design draft for generics has dropped][go blog].
 What makes this particularly notable is that it comes with an actual prototype
